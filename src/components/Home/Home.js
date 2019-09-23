@@ -55,7 +55,8 @@ export default class Home extends PureComponent {
                                         <p className="lead mb-3">
                                             {/*Welcome to my portfolio! <br/>*/}
                                             I am an university student, a software developer who's worked in multiple
-                                            domains like web, CLI programs, automation, etc. I also write on several topics on
+                                            domains like web, CLI programs, automation, etc. I also write on several
+                                            topics on
                                             Medium!
                                             {/*I'm a flamingo that goes absolutely burst as soon as it sees a helium*/}
                                             {/*molecule within the range of 3 KM*/}
@@ -129,12 +130,11 @@ export default class Home extends PureComponent {
                             </h4>
                             <p className="lead">
                                 Aside from managing my servers, I volunteer to manage Linux server for open source
-                                projects which are used for multiple purposes like automating and configuring continuous
-                                (And on demand) building, web hosting, file hosting, providing OTA updates etc. <br/> As
-                                a Linux Server Admin I have been entrusted to keep servers running at optimal
-                                efficiency, configuring them with the right resources for the purpose and security
-                                config. As part of this, I have developed several programs which help server admins do
-                                repetitive tasks with less hassle while maintaining best practices.
+                                projects which are used for multiple purposes like automating building,
+                                web hosting etc. <br/> As a Linux Server Admin I have been entrusted to configure and
+                                keep servers running at optimally and securely, I have also developed several programs
+                                which help server admins do
+                                repetitive tasks with less hassle with maintaining best practices.
                             </p>
                             <h4>
                                 Frontend Web Development
@@ -152,9 +152,8 @@ export default class Home extends PureComponent {
                                 As a backend web developer, I have developed, adapted and configured several backend
                                 systems which use monolithic as well as microservice architecture to work seamlessly
                                 with their frontend counterparts using stacks which allow high scalability without
-                                manual
-                                intervention while being efficient and optimal under less load while being extremely
-                                fast under heavy load without compromising on security.
+                                manual intervention, being efficient under regular load while being fast under heavy
+                                load.
                             </p>
                             <h4>
                                 Project Management
@@ -173,15 +172,6 @@ export default class Home extends PureComponent {
                                 how to implement them simply to ensure desired effect without losing on efficiency,
                                 performance and ease of use.
                             </p>
-                            {/*<h4>*/}
-                            {/*    Android Development*/}
-                            {/*</h4>*/}
-                            {/*<p className="lead">*/}
-                            {/*    Prior to finding my interest in developing simple, secure and useful software I had*/}
-                            {/*    gotten into development and building of the core android platform which has given me a*/}
-                            {/*    good understanding of how many systems work internally and taught me best practices of*/}
-                            {/*    how one should implement software in general.*/}
-                            {/*</p>*/}
                         </div>
                     </Container>
                 </div>
