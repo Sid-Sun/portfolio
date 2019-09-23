@@ -1,0 +1,83 @@
+.tableView:nth-child(odd) {
+    background-color: #fff;
+}
+.tableView:nth-child(even) {
+    background-color: #fafafa;
+}
+
+@media (min-width: 1200px) {
+    .w-xl-100 {
+        width: 100%;
+    }
+    .w-xl-75 {
+        width: 75%;
+    }
+    .w-xl-50 {
+        width: 50%;
+    }
+    .w-xl-25 {
+        width: 25%;
+    }
+    .mw-xl-inherit {
+        max-width: inherit;
+    }
+}
+@media (min-width: 992px) { /*large*/
+    .w-lg-100 {
+        width: 100%;
+    }
+    .w-lg-75 {
+        width: 75%;
+    }
+    .w-lg-50 {
+        width: 50%;
+    }
+    .w-lg-25 {
+        width: 25%;
+    }
+    .mw-lg-inherit {
+        max-width: inherit;
+    }
+}
+@media (min-width: 768px) {  /*medium*/
+    .w-md-100 {
+        width: 100%;
+    }
+    .w-md-75 {
+        width: 75%;
+    }
+    .w-md-50 {
+        width: 50%;
+    }
+    .w-md-25 {
+        width: 25%;
+    }
+    .mw-md-inherit {
+        max-width: inherit;
+    }
+}
+@media (max-width: 576px) { /*small*/
+    .w-sm-75 {
+        width: 75%;
+    }
+    .w-sm-50 {
+        width: 50%;
+    }
+    .w-sm-25 {
+        width: 25%;
+    }
+    .w-sm-100 {
+        width: 100%;
+    }
+    .mw-sm-inherit {
+        max-width: inherit;
+    }
+}
+
+.styles-list-item {
+    background-color: inherit !important;
+}
+
+.no-outline {
+    outline: none !important;
+}
