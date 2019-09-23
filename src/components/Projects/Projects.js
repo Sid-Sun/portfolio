@@ -77,7 +77,7 @@ export default class Projects extends PureComponent {
                                 "Knowing is not enough; we must apply. Willing is not enough; we must do."
                                 <br/>-Johann Wolfgang von Goethe
                             </p>
-                            {this.state.dat}
+                            {this.state.done ? this.state.dat : <h4 className="text-center"> Loading.. </h4> }
                         </div>
                     </Container>
                 </div>
