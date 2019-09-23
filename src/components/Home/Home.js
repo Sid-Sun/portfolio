@@ -45,9 +45,6 @@ export default class Home extends PureComponent {
                                             <a href="https://twitter.com/realSidSun" className="nav-link">
                                                 <i className="fab fa-twitter md-24 social-icon"/>
                                             </a>
-                                            <a href="mailto:sid@sidsun.com" className="nav-link">
-                                                <i className="fas fa-envelope md-24 social-icon"/>
-                                            </a>
                                         </span>
                                         <p className="lead mb-1">
                                             Otherwise known as Sidharth Soni
