@@ -16,7 +16,7 @@ export default class NavigationBar extends PureComponent {
                     <Container>
                         <Navbar.Brand>
                             {/*Sid Sun // Portfolio*/}
-                            <NavLink to="/" class="no-outline">Sid Sun // Portfolio</NavLink>
+                            <NavLink to="/" className="no-outline">Sid Sun // Portfolio</NavLink>
                         </Navbar.Brand>
                         {/*<Navbar.Toggle aria-controls="basic-navbar-nav" id="navbar-toggle">*/}
                         {/*    <i className="material-icons">*/}
@@ -26,12 +26,12 @@ export default class NavigationBar extends PureComponent {
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="ml-auto">
                                 <Nav.Item>
-                                    <NavLink to="/" className="nav-link " onClick={() => {
+                                    <NavLink to="/" className="nav-link no-outline" onClick={() => {
                                         console.log("Clicky")
                                     }}>Home</NavLink>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <NavLink to="/skills" className="nav-link ">Skills</NavLink>
+                                    <NavLink to="/skills" className="nav-link no-outline">Skills</NavLink>
                                 </Nav.Item>
                                 <Nav.Item>
                                     <NavLink to="/projects" className="nav-link no-outline">Projects</NavLink>
