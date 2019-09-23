@@ -3,14 +3,14 @@
 /*    text-decoration: none;*/
 /*}*/
 
-/*a:hover {*/
-/*    color: inherit !important;*/
-/*    text-decoration: none !important;*/
-/*    cursor: pointer;*/
-/*}*/
+a:hover {
+    /*color: inherit !important;*/
+    text-decoration: none !important;
+    cursor: pointer;
+}
 
 .bg-pink {
-    background: #26547c;
+    background: #17183b !important;
 }
 
 html {
@@ -36,39 +36,63 @@ html {
 .navbar-brand a:hover, .navbar-nav .nav-item a:hover {
     color: white !important;
 }
+
 .navbar-nav .nav-item a:hover {
-    background-color: #204566;
+    background-color: #151636;
+    -webkit-transition: background-color 200ms linear;
+    --ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}
+
+.md-18 {
+    font-size: 18px;
+}
+
+.md-24 {
+    font-size: 24px;
+}
+
+.md-36 {
+    font-size: 36px;
+}
+
+.md-48 {
+    font-size: 48px;
+}
+
+/*.material-icons.md-dark.md-active { color: rgba(38, 84, 124, 1.00); }*/
+.md-dark {
+    color: inherit;
+}
+
+#bottom-navbar div a {
+    color: rgba(38, 84, 124, 0.30);
+}
+
+nav div.row div.col a.nav-link:hover {
+    color: #151636;
     -webkit-transition: background-color 200ms linear;
     -ms-transition: background-color 200ms linear;
     transition: background-color 200ms linear;
 }
 
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; }
-
-/*.material-icons.md-dark.md-active { color: rgba(38, 84, 124, 1.00); }*/
-.material-icons.md-dark { color: inherit; }
-
-nav div.row div.col a.nav-link {
-    color: rgba(38, 84, 124, 0.30);
+.md-active {
+    color: rgba(23, 24, 59, 1.00) !important;
 }
 
-nav div.row div.col a.nav-link:hover {
-    color: #204566;
-    -webkit-transition: background-color 200ms linear;
-    -ms-transition: background-color 200ms linear;
-    transition: background-color 200ms linear;}
-
-.md-active { color: rgba(38, 84, 124, 1.00) !important; }
-
-#bottom-navbar{
+#bottom-navbar, #bottom-nav-adj {
     display: none;
 }
 
-@media (max-width: 767.98px) {
-    #bottom-navbar{
+@media (max-width: 767.68px) {
+    #bottom-navbar, #bottom-nav-adj {
         display: block;
     }
+}
+
+.vertical-center-nf {
+    /*min-height: 100%;  !* Fallback for browsers do NOT support vh unit *!*/
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+    display: flex;
+    align-items: center;
 }

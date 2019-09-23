@@ -1,72 +1,59 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import {NavLink} from 'react-router-dom'
 import Navbar from "react-bootstrap/Navbar";
 import Nav from 'react-bootstrap/Nav'
 import Container from "react-bootstrap/Container";
 
 import './NavigationBar.css'
+// import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 
-export default class NavigationBar extends Component {
+export default class NavigationBar extends PureComponent {
     render() {
         return (
             <React.Fragment>
                 <Navbar expand="md" variant="light" className="bg-pink" fixed="top" id="top-navbar">
                     <Container>
                         <Navbar.Brand>
-                            <NavLink to="/">Sid Sun</NavLink>
+                            {/*Sid Sun // Portfolio*/}
+                            <NavLink to="/" class="no-outline">Sid Sun // Portfolio</NavLink>
                         </Navbar.Brand>
-                        {/*<Navbar.Toggle aria-controls="basic-navbar-nav" />*/}
+                        {/*<Navbar.Toggle aria-controls="basic-navbar-nav" id="navbar-toggle">*/}
+                        {/*    <i className="material-icons">*/}
+                        {/*        menu*/}
+                        {/*    </i>*/}
+                        {/*</Navbar.Toggle>*/}
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="ml-auto">
                                 <Nav.Item>
-                                    <NavLink to="/" className="nav-link">Home</NavLink>
+                                    <NavLink to="/" className="nav-link " onClick={() => {
+                                        console.log("Clicky")
+                                    }}>Home</NavLink>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <NavLink to="/skills" className="nav-link">Skills</NavLink>
+                                    <NavLink to="/skills" className="nav-link ">Skills</NavLink>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <NavLink to="/projects" className="nav-link">Projects</NavLink>
+                                    <NavLink to="/projects" className="nav-link no-outline">Projects</NavLink>
                                 </Nav.Item>
-                                <Nav.Item>
-                                    <NavLink to="/socials" className="nav-link">Socials</NavLink>
-                                </Nav.Item>
+                                {/*<Nav.Item>*/}
+                                {/*    <NavLink to="/socials" className="nav-link">Socials</NavLink>*/}
+                                {/*</Nav.Item>*/}
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
                 <Navbar bg="light" fixed="bottom" className="align-content-center justify-content-center" id="bottom-navbar">
-                    <Row>
-                        <Col>
-                            <NavLink to="/" exact activeClassName="md-active" className="nav-link">
-                                <i className="material-icons md-24 md-dark">
-                                    home
-                                </i>
-                            </NavLink>
-                        </Col>
-                        <Col>
-                            <NavLink to="/skills" activeClassName="md-active" className="nav-link">
-                                <i className="material-icons md-24 md-dark" id="skill">
-                                    school
-                                </i>
-                            </NavLink>
-                        </Col>
-                        <Col>
-                            <NavLink to="/projects" activeClassName="md-active" className="nav-link">
-                                <i className="material-icons md-24 md-dark">
-                                    code
-                                </i>
-                            </NavLink>
-                        </Col>
-                        <Col>
-                            <NavLink to="/socials" activeClassName="md-active" className="nav-link">
-                                <i className="material-icons md-24 md-dark">
-                                    group
-                                    {/*emoji_emotions*/}
-                                </i>
-                            </NavLink>
-                        </Col>
+                    <Row className="align-content-center justify-content-center text-center">
+                        <NavLink to="/" exact activeClassName="md-active" className="nav-link col-4 align-self-center">
+                            <i className="fas fa-home md-18 md-dark"/>
+                        </NavLink>
+                        <NavLink to="/skills" activeClassName="md-active" className="nav-link col-4 align-self-center">
+                            <i className="fas fa-pencil-ruler md-18 md-dark"/>
+                        </NavLink>
+                        <NavLink to="/projects" activeClassName="md-active" className="nav-link col-4 align-self-center">
+                            <i className="fas fa-code md-18 md-dark"/>
+                        </NavLink>
                     </Row>
                 </Navbar>
             </React.Fragment>
