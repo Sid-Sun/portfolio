@@ -5,6 +5,7 @@ import'./Skills.css'
 // import Col from "react-bootstrap/Col";
 // import {NavLink} from "react-router-dom";
 import ListGroup from "react-bootstrap/ListGroup";
+import {NavLink} from "react-router-dom";
 
 export default class Skills extends PureComponent {
     componentDidMount() {
@@ -25,6 +26,8 @@ export default class Skills extends PureComponent {
                                 which allows me to develop
                                 a lot of unique and generic skills and be flexible. Maintaining and further developing
                                 the projects allow me to keep practicing.
+                                <br/>
+                                To get a deeper understanding of how things work, I create projects, find them <NavLink to="/projects">here</NavLink>.
                             </p>
                             {/*Add a nice quote below:*/}
                             <p className="lead">
