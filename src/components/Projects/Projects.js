@@ -37,7 +37,7 @@ export default class Projects extends PureComponent {
                             throw e;
                         }
                         const newProject = <Project key={res.data.id} name={uwu[0]} description={uwu[1]}
-                                                    url={res.data.url}/>; //project={val.split('/')[1]}
+                                                    url={res.data.html_url}/>; //project={val.split('/')[1]}
                         this.setState({
                             dat: [
                                 ...this.state.dat,
