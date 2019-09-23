@@ -1,8 +1,7 @@
-.tableView:nth-child(odd) {
-    background-color: #fff;
-}
 .tableView:nth-child(even) {
+    opacity: 1.0;
     background-color: #fafafa;
+    background-color: rgba(250,250,250,0.7);
 }
 
 @media (min-width: 1200px) {

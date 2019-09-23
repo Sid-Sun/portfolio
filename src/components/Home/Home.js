@@ -13,7 +13,7 @@ export default class Home extends PureComponent {
     render() {
         return (
             <div id="home">
-                <div className="tableView text-black-75 py-lg-5 py-3" id="home-intro">
+                <div className="text-black-75 py-lg-5 py-3" id="home-intro">
                     <div className="text-center">
                         <Container className="text-center align-content-center">
                             <Row>
@@ -86,7 +86,7 @@ export default class Home extends PureComponent {
                         </Container>
                     </div>
                 </div>
-                <div className="tableView text-black-75 py-5" id="objective">
+                <div className="text-black-75 py-5" id="objective">
                     <Container className="align-content-center">
                         <div>
                             <h2>
@@ -108,7 +108,7 @@ export default class Home extends PureComponent {
                         </div>
                     </Container>
                 </div>
-                <div className="tableView text-black-75 py-5" id="experience">
+                <div className="text-black-75 py-5" id="experience">
                     <Container className="align-content-center">
                         <div>
                             <h2>
