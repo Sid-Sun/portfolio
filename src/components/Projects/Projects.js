@@ -11,9 +11,12 @@ export default class Projects extends PureComponent {
             projects: [
                 "Sid-Sun/nginx-auto-config",
                 "Sid-Sun/Freda",
+                "Sid-Sun/portfolio",
                 "Sid-Sun/Cosmic-OS.github.io",
                 "Sid-Sun/codeMKII",
-                "Sid-Sun/ssdWearOut"
+                "Sid-Sun/ssdWearOut",
+                "Sid-Sun/strangeBits",
+                "Sid-Sun/cProgramUpdate"
             ],
             done: false,
             dat: []
@@ -70,7 +73,6 @@ export default class Projects extends PureComponent {
                                 level while creating
                                 a reference for when I am in need of it.
                             </p>
-                            {/*Add a nice quote below:*/}
                             <p className="lead">
                                 "Knowing is not enough; we must apply. Willing is not enough; we must do."
                                 <br/>-Johann Wolfgang von Goethe
