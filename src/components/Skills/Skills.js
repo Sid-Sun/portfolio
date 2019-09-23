@@ -14,7 +14,7 @@ export default class Skills extends PureComponent {
     render() {
         return (
             <div className="skills">
-                <div className="tableView text-black-75 py-5">
+                <div className="tableView text-black-75 py-3">
                     <Container className="align-content-center">
                         <div>
                             <h2>

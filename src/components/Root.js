@@ -7,6 +7,7 @@ import Projects from './Projects/Projects'
 // import ProjectDetails from "./Projects/ProjectDetails/ProjectDetails";
 import Footer from "./Footer/Footer";
 import NotFound from "./NotFound/NotFound";
+import Policy from "./Policy/Policy";
 
 export default class Root extends PureComponent {
     render() {
@@ -22,6 +23,7 @@ export default class Root extends PureComponent {
                         <Route path="/skills" component={Skills}/>
                         {/*<Route path="/projects/:project" component={ProjectDetails}/>*/}
                         <Route path="/projects" component={Projects}/>
+                        <Route path="/policy" component={Policy}/>
                         <Route path="/" component={NotFound}/>
                         {/*<Route path="/socials" render={() => <h1>Socials</h1>}/>*/}
                     </Switch>
