@@ -29,7 +29,7 @@ export default class Home extends PureComponent {
                                         </h1>
                                         <span
                                             className="form-row justify-content-center justify-content-lg-start social-icon-group">
-                                            <a href="https://github.com/sid-sun" className="nav-link">
+                                            <a href="https://github.com/sid-sun" className="nav-link pl-lg-1">
                                                 <i className="fab fa-github md-24 social-icon"/>
                                             </a>
                                             <a href="https://www.instagram.com/realsidsun" className="nav-link">
