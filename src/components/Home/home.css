@@ -22,6 +22,10 @@ a.btn-outline-secondary {
     border-color: #f06543 !important;
 }
 
+.text-orange {
+    color: #f06543 !important;
+}
+
 a.btn-outline-secondary:hover {
     background-color: #f06543 !important;
     color: #fff !important;

@@ -54,14 +54,9 @@ export default class Home extends PureComponent {
                                         </p>
                                         <p className="lead mb-3">
                                             {/*Welcome to my portfolio! <br/>*/}
-                                            I am an university student, a software developer who's worked in multiple
+                                            I am a university student, a software developer who's worked in multiple
                                             domains like web, CLI programs, automation, etc. I also write on several
-                                            topics on
-                                            Medium!
-                                            {/*I'm a flamingo that goes absolutely burst as soon as it sees a helium*/}
-                                            {/*molecule within the range of 3 KM*/}
-                                            {/*with an abnormal sense of helium detection which has been empowering my body*/}
-                                            {/*since the last 1400 years*/}
+                                            topics on Medium!
                                         </p>
                                         <Row className="mx-n2" id="explore-btns">
                                             <div className="col-md px-2">
@@ -96,11 +91,12 @@ export default class Home extends PureComponent {
                             <p className="lead">
                                 I am passionate about developing software that has wide applications and is appreciated
                                 by its users not only for doing the job well but also for keeping their privacy intact
-                                without being inconvenient. <br/>I encourage software that protects user's privacy and
-                                does not collect or use any data that it does not need in order for it to be useful.
-                                Therefore, I apply my knowledge, skill, experience, problem solving methods and beliefs
-                                to develop software that protects the user's privacy and which is cleanly implemented
-                                with the right set of tools.
+                                without being i. <br/>I encourage software that protects user's privacy and does not
+                                collect or use any data that it does not need for it to be useful. Therefore, I apply my
+                                knowledge, skill, experience, problem-solving methods and beliefs to develop software
+                                that protects the user's privacy and is cleanly implemented with the right set of tools.
+                                The only thing that can stop you from achieving your objectives is your unwillingness to
+                                try.
                             </p>
                             <p className="lead">
                                 The only thing that can stop you from achieving your objectives is your unwillingness to
@@ -116,7 +112,7 @@ export default class Home extends PureComponent {
                                 Experience
                             </h2>
                             <p className="lead">
-                                Doing software development and collaborating allow me to learn and grow further than my
+                                Doing software development and collaborating allows me to learn and grow further than my
                                 curricular activities could while developing my abilities to work in teams. Writing
                                 helps me collect and evolve my thoughts, it also allows me to prioritize and see things
                                 from different perspectives.
@@ -130,10 +126,10 @@ export default class Home extends PureComponent {
                             </h4>
                             <p className="lead">
                                 Aside from managing my servers, I volunteer to manage Linux server for open source
-                                projects which are used for multiple purposes like automating building,
-                                web hosting etc. <br/> As a Linux Server Admin I have been entrusted to configure and
-                                keep servers running at optimally and securely, I have also developed several programs
-                                which help server admins do
+                                projects which are used for multiple purposes like automating building, web hosting,
+                                etc. <br/> As a Linux Server Admin I have been entrusted to configure and
+                                keep servers running optimally and securely, I have also developed several programs
+                                that help server admins do
                                 repetitive tasks with less hassle with maintaining best practices.
                             </p>
                             <h4>
@@ -141,19 +137,19 @@ export default class Home extends PureComponent {
                             </h4>
                             <p className="lead">
                                 As a frontend web developer, I have created, maintained and further developed several
-                                websites some for personal purposes like my portfolios, blogs, and some in collaboration
-                                with projects which have been adapted by several other projects. <br/> I use modern,
+                                websites. Some for personal purposes like my portfolios, blogs, and some in
+                                collaboration
+                                with projects which have been adopted by several other projects. <br/> I use modern,
                                 clean design philosophies for my frontend projects.
                             </p>
                             <h4>
                                 Backend Web Developer
                             </h4>
                             <p className="lead">
-                                As a backend web developer, I have developed, adapted and configured several backend
-                                systems which use monolithic as well as microservice architecture to work seamlessly
-                                with their frontend counterparts using stacks which allow high scalability without
-                                manual intervention, being efficient under regular load while being fast under heavy
-                                load.
+                                AAs a backend web developer, I have developed, adapted and configured several backend
+                                systems that use monolithic as well as microservice architecture to work seamlessly with
+                                their frontend counterparts using stacks that allow high scalability without manual
+                                intervention, being efficient under regular load while being fast under heavy load.
                             </p>
                             <h4>
                                 Project Management
@@ -169,8 +165,8 @@ export default class Home extends PureComponent {
                             </h4>
                             <p className="lead">
                                 Developing several projects of various domains has taught me what I should use where and
-                                how to implement them simply to ensure desired effect without losing on efficiency,
-                                performance and ease of use.
+                                how to implement them simply to ensure the desired effect without losing on efficiency,
+                                performance, and ease of use.
                             </p>
                         </div>
                     </Container>
