@@ -80,7 +80,7 @@ nav div.row div.col a.nav-link:hover {
     display: none;
 }
 
-@media (max-width: 767.68px) {
+@media (max-width: 768px) {
     #bottom-navbar, #bottom-nav-adj {
         display: block;
     }
