@@ -15,8 +15,8 @@ export default class Root extends PureComponent {
             <div className="root">
                 <NavigationBar/>
                 <div className="w-100" style={{
-                    height: '61px'
-                }}/>                {/*Shift all content down by 61px to account for navbar height*/}
+                    height: '55px'
+                }}/>                {/*Shift all content down by 55px to account for navbar height*/}
                 <div id="content">
                     <Switch>
                         <Route path="/" exact component={Home}/>
