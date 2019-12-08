@@ -89,14 +89,11 @@ export default class Home extends PureComponent {
                                 Objective
                             </h2>
                             <p className="lead">
-                                I am passionate about developing software that has wide applications and is appreciated
-                                by its users not only for doing the job well but also for keeping their privacy intact
-                                without being i. <br/>I encourage software that protects user's privacy and does not
-                                collect or use any data that it does not need for it to be useful. Therefore, I apply my
+                                I am passionate about developing software that has wide applications, does the job well
+                                and does not violate privacy. <br/>I encourage and develop software that is privacy cautious and
+                                does not collect or use any data that it does not need for the core purpose. And to that effort, I apply my
                                 knowledge, skill, experience, problem-solving methods and beliefs to develop software
-                                that protects the user's privacy and is cleanly implemented with the right set of tools.
-                                The only thing that can stop you from achieving your objectives is your unwillingness to
-                                try.
+                                that does not violate privacy and is cleanly implemented with the right set of tools.
                             </p>
                             <p className="lead">
                                 The only thing that can stop you from achieving your objectives is your unwillingness to
