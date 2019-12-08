@@ -1,13 +1,13 @@
 import React, {PureComponent} from 'react';
-import NavigationBar from "./NavigationBar/NavigationBar";
+import NavigationBar from "./NavigationBar";
 import {Route, Switch} from "react-router-dom";
-import Home from './Home/Home'
-import Skills from './Skills/Skills'
-import Projects from './Projects/Projects'
+import Home from './Home'
+import Skills from './Skills'
+import Projects from './Projects'
 // import ProjectDetails from "./Projects/ProjectDetails/ProjectDetails";
-import Footer from "./Footer/Footer";
-import NotFound from "./NotFound/NotFound";
-import Policy from "./Policy/Policy";
+import Footer from "./Footer";
+import NotFound from "./NotFound";
+import Policy from "./Policy";
 
 export default class Root extends PureComponent {
     render() {
