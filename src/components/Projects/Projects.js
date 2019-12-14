@@ -7,58 +7,54 @@ import Spinner from "react-bootstrap/Spinner";
 import {Helmet} from "react-helmet";
 
 export default class Projects extends PureComponent {
+
     constructor(props) {
         super(props);
         this.state = {
-            projects: [
-                "Sid-Sun/nginx-auto-config",
-                "Sid-Sun/Freda",
-                "Sid-Sun/portfolio",
-                "Sid-Sun/Cosmic-OS.github.io",
-                "Sid-Sun/codeMKII",
-                "Sid-Sun/ssdWearOut",
-                "Sid-Sun/strangeBits",
-                "Sid-Sun/cProgramUpdate"
-            ],
+            projects: [],
             fetchedProjects: false,
             done: false,
             dat: []
-        };
+        }
     }
 
     componentDidMount() {
         window.scrollTo(0, 0);
         if (!this.state.done) {
-            axios.get("https://cdn.sidsun.com/projects.json").then(data => {
+            axios.get("https://cdn.sidsun.com/projects.json").then(res1 => {
                 this.setState({
-                    fetchedProjects: true
+                    fetchedProjects: true,
+                    projects: res1.data
                 });
-                data.data.map(val => {
-                    axios.get("https://api.github.com/repos/" + val)
-                        .then(res => {
+                axios.get("https://api.github.com/users/sid-sun/repos").then(res => {
+                    res.data.map(val => {
+                        if (this.state.done) {
+                            return 0
+                        }
+                        if (this.state.projects.includes(val.full_name)) {
                             let uwu = [];
                             try {
-                                uwu = res.data.description.split('//')
+                                uwu = val.description.split('//')
                             } catch (e) {
                                 throw e;
                             }
-                            const newProject = <Project key={res.data.id} name={uwu[0]} description={uwu[1]}
-                                                        url={res.data.html_url}/>; //project={val.split('/')[1]}
+                            const newProject = <Project key={val.id} name={uwu[0]} description={uwu[1]}
+                                                        url={val.html_url}/>; //project={val.split('/')[1]}
                             this.setState({
                                 dat: [
                                     ...this.state.dat,
                                     newProject
                                 ]
                             });
-                            if (this.state.projects.length === this.state.dat.length) {
-                                console.log("OK");
-                                this.setState({
-                                    done: true
-                                });
-                                console.log(this.state.done);
-                            }
-                        });
-                    return 0
+                        }
+                        if (this.state.projects.length === this.state.dat.length) {
+                            console.log("All projects have been fetched and properly added to list!");
+                            this.setState({
+                                done: true
+                            });
+                        }
+                        return 0
+                    });
                 })
             })
         }
