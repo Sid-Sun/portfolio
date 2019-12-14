@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Project from "./Project/Project";
 import axios from 'axios';
 import Spinner from "react-bootstrap/Spinner";
+import {Helmet} from "react-helmet";
 
 export default class Projects extends PureComponent {
     constructor(props) {
@@ -65,33 +66,44 @@ export default class Projects extends PureComponent {
 
     render() {
         return (
-            <div className="projects">
-                <div className="text-black-75 py-3">
-                    <Container className="align-content-center">
-                        <div>
-                            <h2>
-                                Projects
-                            </h2>
-                            <p className="lead">
-                                Learning is a continuous process and experience is the best teacher. Therefore, I try to
-                                implement everything I learn
-                                in projects, which allows me to understand how the implementation works at a much deeper
-                                level while creating
-                                a reference for when I am require it.
-                            </p>
-                            <p className="lead">
-                                "Knowing is not enough; we must apply. Willing is not enough; we must do."
-                                <br/>-Johann Wolfgang von Goethe
-                            </p>
-                            {this.state.done ? this.state.dat :
-                                <div className="d-flex justify-content-center">
-                                    <Spinner animation="border" className="mx-auto text-orange"/>
-                                </div>
-                            }
-                        </div>
-                    </Container>
+            <React.Fragment>
+                <Helmet>
+                    <title>Projects - Sid Sun</title>
+                    <meta
+                        name="description"
+                        content="Sid Sun (Sidharth Soni)'s Projects"
+                    />
+                </Helmet>
+                <div className="projects">
+                    <div className="text-black-75 py-3">
+                        <Container className="align-content-center">
+                            <div>
+                                <h2>
+                                    Projects
+                                </h2>
+                                <p className="lead">
+                                    Learning is a continuous process and experience is the best teacher. Therefore, I
+                                    try to
+                                    implement everything I learn
+                                    in projects, which allows me to understand how the implementation works at a much
+                                    deeper
+                                    level while creating
+                                    a reference for when I am require it.
+                                </p>
+                                <p className="lead">
+                                    "Knowing is not enough; we must apply. Willing is not enough; we must do."
+                                    <br/>-Johann Wolfgang von Goethe
+                                </p>
+                                {this.state.done ? this.state.dat :
+                                    <div className="d-flex justify-content-center">
+                                        <Spinner animation="border" className="mx-auto text-orange"/>
+                                    </div>
+                                }
+                            </div>
+                        </Container>
+                    </div>
                 </div>
-            </div>
+            </React.Fragment>
         )
     }
 }
