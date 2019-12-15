@@ -69,8 +69,6 @@ export default class Projects extends PureComponent {
                         name="description"
                         content="Sid Sun (Sidharth Soni)'s Projects"
                     />
-                    <link rel="preconnect" href="https://api.github.com"/>
-                    <link rel="preconnect" href="https://cdn.sidsun.com"/>
                 </Helmet>
                 <div className="projects">
                     <div className="text-black-75 py-3">
