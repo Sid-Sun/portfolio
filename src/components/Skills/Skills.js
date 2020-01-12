@@ -2,15 +2,72 @@ import React, {PureComponent} from 'react';
 import Container from "react-bootstrap/Container";
 import {Helmet} from "react-helmet";
 import './Skills.css'
-// import Row from "react-bootstrap/Row";
-// import Col from "react-bootstrap/Col";
-// import {NavLink} from "react-router-dom";
 import ListGroup from "react-bootstrap/ListGroup";
 import {NavLink} from "react-router-dom";
+import axios from "axios";
 
 export default class Skills extends PureComponent {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            languages: [],
+            frameworks: [],
+            tools: [],
+            fetched: false,
+            done: false,
+            response: {}
+        }
+    }
+
     componentDidMount() {
         window.scrollTo(0, 0);
+        if (!this.state.done) {
+            axios.get("https://cdn.sidsun.com/skills.json").then(response => {
+                console.log(response);
+                this.setState({
+                    fetched: true,
+                    done: true,
+                    response: response.data,
+                    // languages: response.data.languages,
+                    // frameworks: response.data.frameworks,
+                    // tools: response.data.tools
+                });
+                response.data.languages.map((val, index) => {
+                    const newSkill = <ListGroup.Item className="styles-list-item" as="li"
+                                                     key={index}>{val}</ListGroup.Item>;
+                    this.setState({
+                        languages: [
+                            ...this.state.languages,
+                            newSkill
+                        ]
+                    });
+                    return 0
+                });
+                response.data.frameworks.map((val, index) => {
+                    const newSkill = <ListGroup.Item className="styles-list-item" as="li"
+                                                     key={index}>{val}</ListGroup.Item>;
+                    this.setState({
+                        frameworks: [
+                            ...this.state.frameworks,
+                            newSkill
+                        ]
+                    });
+                    return 0
+                });
+                response.data.tools.map((val, index) => {
+                    const newSkill = <ListGroup.Item className="styles-list-item" as="li"
+                                                     key={index}>{val}</ListGroup.Item>;
+                    this.setState({
+                        tools: [
+                            ...this.state.tools,
+                            newSkill
+                        ]
+                    });
+                    return 0
+                })
+            })
+        }
     }
 
     render() {
@@ -72,11 +129,10 @@ export default class Skills extends PureComponent {
                                         border: 0,
                                     }} className="styles-list-item bg-pink text-white rounded-lg" as="li">What I
                                         know:</ListGroup.Item>
-                                    <ListGroup.Item className="styles-list-item" as="li">C</ListGroup.Item>
-                                    <ListGroup.Item className="styles-list-item" as="li">C++</ListGroup.Item>
-                                    <ListGroup.Item className="styles-list-item" as="li">GoLang (Go)</ListGroup.Item>
-                                    <ListGroup.Item className="styles-list-item" as="li">JavaScript</ListGroup.Item>
-                                    <ListGroup.Item className="styles-list-item" as="li">Python</ListGroup.Item>
+                                    {this.state.done ? this.state.languages :
+                                        <ListGroup.Item className="styles-list-item"
+                                                        as="li">Loading....</ListGroup.Item>
+                                    }
                                 </ListGroup>
                             </div>
                         </Container>
@@ -101,13 +157,10 @@ export default class Skills extends PureComponent {
                                         border: 0,
                                     }} className="styles-list-item bg-pink text-white rounded-lg" as="li">What I
                                         know:</ListGroup.Item>
-                                    <ListGroup.Item className="styles-list-item" as="li">ReactJS</ListGroup.Item>
-                                    <ListGroup.Item className="styles-list-item" as="li">Angular</ListGroup.Item>
-                                    <ListGroup.Item className="styles-list-item" as="li">Vue JS</ListGroup.Item>
-                                    <ListGroup.Item className="styles-list-item" as="li">jQuery</ListGroup.Item>
-                                    <ListGroup.Item className="styles-list-item" as="li">Bootstrap 4</ListGroup.Item>
-                                    <ListGroup.Item className="styles-list-item" as="li">Flask</ListGroup.Item>
-                                    {/*<ListGroup.Item className="styles-list-item"></ListGroup.Item>*/}
+                                    {this.state.done ? this.state.frameworks :
+                                        <ListGroup.Item className="styles-list-item"
+                                                        as="li">Loading....</ListGroup.Item>
+                                    }
                                 </ListGroup>
                             </div>
                         </Container>
@@ -139,13 +192,10 @@ export default class Skills extends PureComponent {
                                         border: 0,
                                     }} className="styles-list-item bg-pink text-white rounded-lg" as="li">What I
                                         know:</ListGroup.Item>
-                                    <ListGroup.Item className="styles-list-item">Jenkins CI/CD</ListGroup.Item>
-                                    <ListGroup.Item className="styles-list-item">PostgreSQL</ListGroup.Item>
-                                    <ListGroup.Item className="styles-list-item">Firebase Storage</ListGroup.Item>
-                                    {/*<ListGroup.Item className="styles-list-item">Redis</ListGroup.Item>*/}
-                                    <ListGroup.Item className="styles-list-item">Nginx</ListGroup.Item>
-                                    <ListGroup.Item className="styles-list-item">Git VCS</ListGroup.Item>
-                                    <ListGroup.Item className="styles-list-item">Automation Scripting</ListGroup.Item>
+                                    {this.state.done ? this.state.tools :
+                                        <ListGroup.Item className="styles-list-item"
+                                                        as="li">Loading....</ListGroup.Item>
+                                    }
                                 </ListGroup>
                             </div>
                         </Container>

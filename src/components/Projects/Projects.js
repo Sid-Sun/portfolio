@@ -1,6 +1,5 @@
 import React, {PureComponent} from 'react';
 import Container from "react-bootstrap/Container";
-// import {NavLink} from "react-router-dom";
 import Project from "./Project/Project";
 import axios from 'axios';
 import Spinner from "react-bootstrap/Spinner";

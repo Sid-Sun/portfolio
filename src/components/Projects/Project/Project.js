@@ -1,6 +1,4 @@
 import React, {PureComponent} from 'react';
-// import {NavLink} from "react-router-dom";
-// import Row from "react-bootstrap/Row";
 
 export default class Project extends PureComponent {
     render() {
@@ -21,7 +19,7 @@ export default class Project extends PureComponent {
                     {/*</span>*/}
                     <span className="col-md px-2">
                         <a href={this.props.url}
-                                 className="btn btn-lg btn-outline-secondary mb-3">
+                           className="btn btn-lg btn-outline-secondary mb-3">
                             Explore on GitHub
                         </a>
                     </span>
