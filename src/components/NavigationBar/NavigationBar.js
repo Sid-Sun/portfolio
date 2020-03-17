@@ -26,9 +26,7 @@ export default class NavigationBar extends PureComponent {
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="ml-auto">
                                 <Nav.Item>
-                                    <NavLink to="/" className="nav-link no-outline" onClick={() => {
-                                        console.log("Clicky")
-                                    }}>Home</NavLink>
+                                    <NavLink to="/" className="nav-link no-outline">Home</NavLink>
                                 </Nav.Item>
                                 <Nav.Item>
                                     <NavLink to="/skills" className="nav-link no-outline">Skills</NavLink>
