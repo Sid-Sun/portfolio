@@ -4,6 +4,21 @@ import {NavLink} from "react-router-dom";
 // import Nav from "react-bootstrap/Nav";
 
 export default class Footer extends PureComponent {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            year: 2020
+        }
+    }
+
+    componentDidMount() {
+        let year = new Date().getFullYear()
+        this.setState({
+            year: year
+        })
+    }
+
     render() {
         return (
             <div className="footer">
@@ -11,7 +26,7 @@ export default class Footer extends PureComponent {
                     <Container className="align-content-center">
                         <div>
                             <p className="text-center">
-                                — Copyright © 2019 Sid Sun. All Rights Reserved. —
+                                — Copyright © { this.state.year } Sid Sun. All Rights Reserved. —
                             </p>
                             <span
                                 className="form-row justify-content-center social-icon-group mx-auto">
