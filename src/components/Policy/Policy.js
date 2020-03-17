@@ -33,53 +33,22 @@ export default class Policy extends Component {
                                     What information do we collect?
                                 </h5>
                                 <p className="lead">
-                                    We only use Personally Identifiable Information (hereafter referred to as PII)
-                                    through
-                                    Google Analytics which uses cookies and IP address (classified as PII under GDPR) to
-                                    tracks and report analytical web traffic data. The IP address is anonymized as soon
-                                    as
-                                    web traffic data reaches the Analytics servers and is not exposed.
-                                </p>
-                                <h5 className="pt-3">
-                                    What do we use your information for?
-                                </h5>
-                                <p className="lead">
-                                    Statistical data collected by Google Analytics is used to analyze and improve user
-                                    experience and content.
-                                </p>
-                                <h5 className="pt-3">
-                                    How do we protect your information?
-                                </h5>
-                                <p className="lead">
-                                    We anonymize your PII as soon as possible and We implement a variety of security
-                                    measures to maintain the safety of your personal information in transmission through
-                                    encryption.
+                                    We do NOT collect any Personally Identifiable Information (hereafter referred to as PII) like name, email address etc.
                                 </p>
                                 <h5 className="pt-3">
                                     Do we use cookies?
                                 </h5>
                                 <p className="lead">
-                                    Yes, Google Analytics uses cookies to track usage and to compile aggregate data
-                                    about site traffic and site interaction so that we can offer better site
-                                    experiences.
+                                    Yes, CloudFlare uses cookies to detect malicious visitors to websites and minimizes blocking legitimate users. It is necessary for supporting Cloudflare's security features.
                                 </p>
                                 <h5 className="pt-3">
                                     Third Party disclosure
                                 </h5>
                                 <p className="lead">
-                                    We use Google Analytics to analyze and track web traffic, making Google the data
-                                    processing third party. Google Analytics is not permitted to use
-                                    the information collected on our behalf except to help us collect and analyze web
-                                    traffic.
                                     We also use CloudFlare for content delivery network services, DDoS mitigation,
-                                    Internet
-                                    security services and as a reverse proxy. <br/> These third-parties have separate
-                                    and
-                                    independent
-                                    privacy policies. We therefore have no responsibility or liability for the content
-                                    and
-                                    activities of these linked sites. Nonetheless, we seek to protect the integrity of
-                                    our
+                                    Internet security services and as a reverse proxy. <br/> These third-parties have separate
+                                    and independent privacy policies. We therefore have no responsibility or liability for the content and
+                                    activities of these third-parties. Nonetheless, we seek to protect the integrity of our
                                     site and welcome any feedback about these third parties.
                                 </p>
                                 <h5 className="pt-3">
@@ -104,7 +73,8 @@ export default class Policy extends Component {
                                     Does our site allow third-party behavioral tracking?
                                 </h5>
                                 <p className="lead">
-                                    Yes, we use Google Analytics to track and collect analytical web traffic data.
+                                    Yes, CloudFlare tracks users to provide content delivery network services, DDoS mitigation,
+                                    Internet security services and collecting analytical web traffic data.
                                 </p>
                                 <h5 className="pt-3">
                                     Your Consent
@@ -119,7 +89,7 @@ export default class Policy extends Component {
                                     If we decide to change our privacy policy, we will post those changes on this page,
                                     and
                                     update the Privacy Policy modification date below.
-                                    This policy was last modified on 23/09/2019 (DD/MM/YYYY).
+                                    This policy was last modified on 17/03/2020 (DD/MM/YYYY).
                                 </p>
                                 <h5 className="pt-3">
                                     Contact US
