@@ -19,7 +19,7 @@ export default class Projects extends PureComponent {
     componentDidMount() {
         window.scrollTo(0, 0);
         if (!this.state.done) {
-            axios.get("https://api.github.com/users/sid-sun/repos").then(res => {
+            axios.get("https://api.github.com/users/sid-sun/repos?per_page=1000").then(res => {
                 res.data.map(val => {
                     if (this.state.done) {
                         return 0
