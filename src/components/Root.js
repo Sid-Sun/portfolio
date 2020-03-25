@@ -23,7 +23,7 @@ export default class Root extends PureComponent {
 
     componentDidMount() {
         if (!this.state.done) {
-            axios.get("http://cdn.sidsun.com/portfolio-data.json").then(response => {
+            axios.get("https://cdn.sidsun.com/portfolio-data.json").then(response => {
                 this.setState({
                     done: true,
                     response: response.data
