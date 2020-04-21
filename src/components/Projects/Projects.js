@@ -20,11 +20,14 @@ export default class Projects extends PureComponent {
         window.scrollTo(0, 0);
         if (!this.state.done) {
             axios.get("https://api.github.com/users/sid-sun/repos?per_page=1000").then(res => {
-                res.data.map(val => {
+                res.data.map((val, ind) => {
                     if (this.state.done) {
                         return 0
                     }
                     if (this.state.data.includes(val.full_name)) {
+                        let targetIndex = this.state.data.findIndex(x => {
+                            return x === val.full_name;
+                        });
                         let uwu = [];
                         try {
                             uwu = val.description.split('//')
@@ -33,14 +36,15 @@ export default class Projects extends PureComponent {
                         }
                         const newProject = <Project key={val.id} name={uwu[0]} description={uwu[1]}
                                                     url={val.html_url}/>; //project={val.split('/')[1]}
+                        let projects = this.state.projects;
+                        projects[targetIndex] = newProject;
                         this.setState({
                             projects: [
-                                ...this.state.projects,
-                                newProject
+                                ...projects
                             ]
                         });
                     }
-                    if (this.state.data.length === this.state.projects.length) {
+                    if (ind === (res.data.length -1)) {
                         this.setState({
                             done: true
                         });
