@@ -4,7 +4,6 @@ import {Route, Switch} from "react-router-dom";
 import Home from './Home'
 import Skills from './Skills'
 import Projects from './Projects'
-// import ProjectDetails from "./Projects/ProjectDetails/ProjectDetails";
 import Footer from "./Footer";
 import NotFound from "./NotFound";
 import Policy from "./Policy";
@@ -42,10 +41,10 @@ export default class Root extends PureComponent {
                 {/*Shift all content down by 55px to account for navbar height*/}
                 <div id="content">
                     <Switch>
-                        <Route path="/" exact render={(props) => <Home {...props} data={this.state.response.home} />} />
-                        <Route path="/skills" render={(props) => <Skills {...props} data={this.state.response.skills} />} />
+                        <Route path="/" exact render={(props) => <Home data={this.state.response.home} />} />
+                        <Route path="/skills" render={(props) => <Skills data={this.state.response.skills} />} />
                         {/*<Route path="/projects/:project" component={ProjectDetails}/>*/}
-                        <Route path="/projects" render={(props) => <Projects {...props} data={this.state.response.projects} />}/>
+                        <Route path="/projects" render={(props) => <Projects data={this.state.response.projects} />}/>
                         <Route path="/policy" component={Policy}/>
                         <Route path="/" component={NotFound}/>
                         {/*<Route path="/socials" render={() => <h1>Socials</h1>}/>*/}
