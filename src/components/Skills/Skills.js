@@ -1,10 +1,9 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import Container from "react-bootstrap/Container";
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 import './Skills.css'
 import ListGroup from "react-bootstrap/ListGroup";
-// import {NavLink} from "react-router-dom";
-// import axios from "axios";
+import PropTypes from 'prop-types';
 
 export default class Skills extends PureComponent {
 
@@ -13,6 +12,7 @@ export default class Skills extends PureComponent {
     }
 
     render() {
+        const { intro, skills } = this.props.data;
         return (
             <React.Fragment>
                 <Helmet>
@@ -30,26 +30,26 @@ export default class Skills extends PureComponent {
                                     Skills
                                 </h2>
                                 <p className="lead">
-                                    {this.props.data.intro.text.map((text, index) => {
-                                        if (index === this.props.data.intro.text.length -1) {
+                                    {intro.text.map((text, index) => {
+                                        if (index === intro.text.length - 1) {
                                             return text
                                         } else {
-                                            return <React.Fragment key={ index }>
+                                            return <React.Fragment key={index}>
                                                 {text}
-                                                <br/>
+                                                <br />
                                             </React.Fragment>
                                         }
                                     })}
                                 </p>
                                 <p className="lead">
-                                    {this.props.data.intro.quote.text} <br/> -
-                                    {this.props.data.intro.quote.by}
+                                    {intro.quote.text} <br /> -
+                                    {intro.quote.by}
                                 </p>
                             </div>
                         </Container>
                     </div>
                     {
-                        this.props.data.skills.map((skillset, index) => {
+                        skills.map((skillset, index) => {
                             return <div className="text-black-75 py-5" key={index}>
                                 <Container className="align-content-center">
                                     <div>
@@ -58,12 +58,12 @@ export default class Skills extends PureComponent {
                                         </h2>
                                         <p className="lead">
                                             {skillset.text.map((text, index) => {
-                                                if (index === skillset.text.length -1) {
+                                                if (index === skillset.text.length - 1) {
                                                     return text
                                                 } else {
-                                                    return <React.Fragment key={ index }>
+                                                    return <React.Fragment key={index}>
                                                         {text}
-                                                        <br/>
+                                                        <br />
                                                     </React.Fragment>
                                                 }
                                             })}
@@ -75,7 +75,7 @@ export default class Skills extends PureComponent {
                                             {
                                                 skillset.table.list.map((skill, index) => {
                                                     return <ListGroup.Item className="styles-list-item" as="li"
-                                                                           key={index}>{skill}</ListGroup.Item>
+                                                        key={index}>{skill}</ListGroup.Item>
                                                 })
                                             }
                                         </ListGroup>
@@ -88,4 +88,24 @@ export default class Skills extends PureComponent {
             </React.Fragment>
         )
     }
+}
+
+Skills.propTypes = {
+    data: PropTypes.shape({
+        intro: PropTypes.shape({
+            text: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+            quote: PropTypes.shape({
+                text: PropTypes.string.isRequired,
+                by: PropTypes.string.isRequired
+            }).isRequired
+        }).isRequired,
+        skills: PropTypes.arrayOf(PropTypes.shape({
+            title: PropTypes.string.isRequired,
+            text: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+            table: PropTypes.shape({
+                title: PropTypes.string.isRequired,
+                list: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired
+            }).isRequired
+        }).isRequired).isRequired
+    }).isRequired
 }

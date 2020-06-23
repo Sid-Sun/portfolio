@@ -1,9 +1,10 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import Container from "react-bootstrap/Container";
 import Project from "./Project/Project";
 import axios from 'axios';
 import Spinner from "react-bootstrap/Spinner";
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
+import PropTypes from 'prop-types';
 
 export default class Projects extends PureComponent {
 
@@ -35,7 +36,7 @@ export default class Projects extends PureComponent {
                             throw e;
                         }
                         const newProject = <Project key={val.id} name={uwu[0]} description={uwu[1]}
-                                                    url={val.html_url}/>; //project={val.split('/')[1]}
+                            url={val.html_url} />; //project={val.split('/')[1]}
                         let projects = this.state.projects;
                         projects[targetIndex] = newProject;
                         this.setState({
@@ -44,7 +45,7 @@ export default class Projects extends PureComponent {
                             ]
                         });
                     }
-                    if (ind === (res.data.length -1)) {
+                    if (ind === (res.data.length - 1)) {
                         this.setState({
                             done: true
                         });
@@ -56,6 +57,7 @@ export default class Projects extends PureComponent {
     }
 
     render() {
+        const { intro } = this.props.data;
         return (
             <React.Fragment>
                 <Helmet>
@@ -73,24 +75,24 @@ export default class Projects extends PureComponent {
                                     Projects
                                 </h2>
                                 <p className="lead">
-                                    {this.props.data.intro.text.map((text, index) => {
-                                        if (index === this.props.data.intro.text.length - 1) {
+                                    {intro.text.map((text, index) => {
+                                        if (index === intro.text.length - 1) {
                                             return text
                                         } else {
-                                            return <React.Fragment key={ index }>
+                                            return <React.Fragment key={index}>
                                                 {text}
-                                                <br/>
+                                                <br />
                                             </React.Fragment>
                                         }
                                     })}
                                 </p>
                                 <p className="lead">
-                                    {this.props.data.intro.quote.text}
-                                    <br/> - {this.props.data.intro.quote.by}
+                                    {intro.quote.text}
+                                    <br /> - {intro.quote.by}
                                 </p>
                                 {this.state.done ? this.state.projects :
                                     <div className="d-flex justify-content-center">
-                                        <Spinner animation="border" className="mx-auto text-orange"/>
+                                        <Spinner animation="border" className="mx-auto text-orange" />
                                     </div>
                                 }
                             </div>
@@ -100,4 +102,17 @@ export default class Projects extends PureComponent {
             </React.Fragment>
         )
     }
+}
+
+Projects.propTypes = {
+    data: PropTypes.shape({
+        intro: PropTypes.shape({
+            text: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+            quote: PropTypes.shape({
+                text: PropTypes.string.isRequired,
+                by: PropTypes.string.isRequired
+            }).isRequired
+        }).isRequired,
+        projects: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired
+    }).isRequired
 }
