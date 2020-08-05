@@ -1,0 +1,9 @@
+.git
+.github
+.idea
+.vscode
+.gitignore
+Dockerfile
+docker-compose.yml
+node_modules
+build
