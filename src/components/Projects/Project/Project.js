@@ -3,7 +3,7 @@ import React, {PureComponent} from 'react';
 export default class Project extends PureComponent {
     render() {
         return (
-            <div className="tableView container rounded-lg">
+            <div className="tableView-projects container rounded-lg col-md-6">
                 <h4 className="pt-3">
                     {this.props.name}
                 </h4>

@@ -1,10 +1,11 @@
-import React, { PureComponent } from 'react';
+import React, {PureComponent} from 'react';
 import Container from "react-bootstrap/Container";
 import Project from "./Project/Project";
 import axios from 'axios';
 import Spinner from "react-bootstrap/Spinner";
-import { Helmet } from "react-helmet";
+import {Helmet} from "react-helmet";
 import PropTypes from 'prop-types';
+import {Row} from "react-bootstrap";
 
 export default class Projects extends PureComponent {
 
@@ -36,7 +37,7 @@ export default class Projects extends PureComponent {
                             throw e;
                         }
                         const newProject = <Project key={val.id} name={uwu[0]} description={uwu[1]}
-                            url={val.html_url} />; //project={val.split('/')[1]}
+                                                    url={val.html_url}/>; //project={val.split('/')[1]}
                         let projects = this.state.projects;
                         projects[targetIndex] = newProject;
                         this.setState({
@@ -57,7 +58,7 @@ export default class Projects extends PureComponent {
     }
 
     render() {
-        const { intro } = this.props.data;
+        const {intro} = this.props.data;
         return (
             <React.Fragment>
                 <Helmet>
@@ -81,18 +82,20 @@ export default class Projects extends PureComponent {
                                         } else {
                                             return <React.Fragment key={index}>
                                                 {text}
-                                                <br />
+                                                <br/>
                                             </React.Fragment>
                                         }
                                     })}
                                 </p>
                                 <p className="lead">
                                     {intro.quote.text}
-                                    <br /> - {intro.quote.by}
+                                    <br/> - {intro.quote.by}
                                 </p>
-                                {this.state.done ? this.state.projects :
+                                {this.state.done ? <Row>
+                                        {this.state.projects}
+                                    </Row> :
                                     <div className="d-flex justify-content-center">
-                                        <Spinner animation="border" className="mx-auto text-orange" />
+                                        <Spinner animation="border" className="mx-auto text-orange"/>
                                     </div>
                                 }
                             </div>
