@@ -45,9 +45,6 @@ export default class Home extends PureComponent {
                                                 <a href="https://github.com/sid-sun" className="nav-link pl-lg-1">
                                                     <i className="fab fa-github md-24 social-icon" />
                                                 </a>
-                                                <a href="https://www.instagram.com/realsidsun" className="nav-link">
-                                                    <i className="fab fa-instagram md-24 social-icon" />
-                                                </a>
                                                 <a href="https://www.linkedin.com/in/sidharth-soni-3a47b0164"
                                                     className="nav-link">
                                                     <i className="fab fa-linkedin md-24 social-icon" />
@@ -55,8 +52,8 @@ export default class Home extends PureComponent {
                                                 <a href="https://medium.sidsun.com/" className="nav-link">
                                                     <i className="fab fa-medium md-24 social-icon" />
                                                 </a>
-                                                <a href="https://twitter.com/realSidSun" className="nav-link">
-                                                    <i className="fab fa-twitter md-24 social-icon" />
+                                                <a href="mailto:sid@sidsun.com" className="nav-link">
+                                                    <i className="fas fa-envelope md-24 social-icon" />
                                                 </a>
                                             </span>
                                             <p className="lead mb-1">
