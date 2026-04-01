@@ -51,7 +51,7 @@ export default class Home extends PureComponent {
                           <i className="fab fa-github md-24 social-icon" />
                         </a>
                         <a
-                          href="https://www.linkedin.com/in/sidharth-soni-3a47b0164"
+                          href="https://www.linkedin.com/in/realsidsun"
                           className="nav-link"
                         >
                           <i className="fab fa-linkedin md-24 social-icon" />
